@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>Project-4 Enterprise System</display-name>
+    
+    <welcome-file-list>
+        <welcome-file>authentication.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- Authentication Servlet -->
+    <servlet>
+        <servlet-name>AuthenticateUser</servlet-name>
+        <servlet-class>servlets.AuthenticateUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthenticateUser</servlet-name>
+        <url-pattern>/AuthenticateUser</url-pattern>
+    </servlet-mapping>
+
+    <!-- Client User Servlet -->
+    <servlet>
+        <servlet-name>ClientUserServlet</servlet-name>
+        <servlet-class>servlets.ClientUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClientUserServlet</servlet-name>
+        <url-pattern>/ClientUserServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Root User Servlet -->
+    <servlet>
+    	<servlet-name>RootUserServlet</servlet-name>
+    	<servlet-class>servlets.RootUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>RootUserServlet</servlet-name>
+    	<url-pattern>/RootUserServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Data Entry User Servlet -->
+	<servlet>
+    	<servlet-name>DataEntryUserServlet</servlet-name>
+    	<servlet-class>servlets.DataEntryUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>DataEntryUserServlet</servlet-name>
+    	<url-pattern>/DataEntryUserServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Accountant User Servlet -->
+	<servlet>
+    	<servlet-name>AccountantUserServlet</servlet-name>
+    	<servlet-class>servlets.AccountantUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>AccountantUserServlet</servlet-name>
+    	<url-pattern>/AccountantUserServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>
